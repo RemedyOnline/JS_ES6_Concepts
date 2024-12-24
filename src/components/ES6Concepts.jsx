@@ -121,61 +121,61 @@ const customerData = [
 	{
 		id: 1,
 		name: "Kofi",
-		age: 23,
+		age: 32,
 		country: "Ghana",
 	},
 	{
 		id: 2,
 		name: "Sarah",
-		age: 31,
+		age: 36,
 		country: "USA",
 	},
 	{
 		id: 3,
 		name: "Yaw",
-		age: 21,
+		age: 28,
 		country: "Togo",
 	},
 	{
 		id: 4,
 		name: "Ming",
-		age: 28,
+		age: 30,
 		country: "China",
 	},
 	{
 		id: 5,
 		name: "Sarah",
-		age: 31,
+		age: 33,
 		country: "USA",
 	},
 	{
 		id: 6,
 		name: "John",
-		age: 45,
+		age: 46,
 		country: "UK",
 	},
 	{
 		id: 7,
 		name: "Priya",
-		age: 27,
+		age: 29,
 		country: "India",
 	},
 	{
 		id: 8,
-		name: "Ming",
-		age: 28,
+		name: "Akwasi",
+		age: 39,
 		country: "China",
 	},
 	{
 		id: 9,
 		name: "Ahmed",
-		age: 35,
+		age: 38,
 		country: "Egypt",
 	},
 	{
 		id: 10,
 		name: "John",
-		age: 45,
+		age: 41,
 		country: "UK",
 	},
 	{
@@ -192,12 +192,64 @@ const customerData = [
 	},
 ];
 
-const getAllNames = customerData.map((singleData, index) => {
-	console.log(singleData.country, index);
-	return `${singleData.name} is from ${singleData.country} ${index}`;
+// map...
+const getAllNames = customerData.map((singleName) => {
+	console.log(...singleName.name);
+	return `${singleName.name} is ${singleName.age}years old. A recident from ${singleName.country}`;
 });
 
-console.log(...getAllNames);
+console.log(getAllNames);
+
+// find - returns only the first result it comes across..
+
+const getPersonByCountry = customerData.find((singleName) => {
+	return singleName.country === "China"; //
+});
+
+console.log(getPersonByCountry);
+
+// filter - returns all the results associated with the condition...
+
+const getAllChinese = customerData.filter((singleName) => {
+	return singleName.country === "China";
+});
+
+console.log(getAllChinese);
+console.log(...getAllChinese);
+
+// some - returns a boolean flag if any condition is satisfied...
+
+const checkSomeAge = customerData.some((singleName) => {
+	console.log(singleName.age);
+	let result = `It is ${
+		singleName.age > 30
+	} that the least age in the database is greater than 30`;
+	console.log(result);
+	return result;
+});
+
+console.log(checkSomeAge);
+// every - returns a boolean flag if all conditions are satisfied...
+
+const checkEveryAge = customerData.every((singleName) => {
+	return singleName.age > 20;
+});
+
+console.log(checkEveryAge);
+
+// includes - returns a boolean flag if condition is satified...
+
+const fruits = ["apple", "banana", "mango"];
+
+console.log(fruits.includes("apple"));
+
+// indexOf - returns the current index of an item if it exist. and returns -1 if it does not exist...
+
+console.log(fruits.includes("apple"), fruits.indexOf("mango"));
+console.log(fruits.includes("apple"), fruits.indexOf("guava"));
+
+// findIndex
+
 // --------------------------------------------------------------------
 
 // --------------------------------------------------------------------

@@ -5,8 +5,8 @@ import TableOfContent from "./components/TableOfContent";
 function App() {
 	return (
 		<>
-			<h1>ES6 Concepts Tutorials</h1>
-			<section>
+			<h1 className="text-3xl font-semibold mb-4">ES6 Concepts Tutorials</h1>
+			<section className="mx-12">
 				<TableOfContent />
 				<ES6Concepts />
 			</section>
