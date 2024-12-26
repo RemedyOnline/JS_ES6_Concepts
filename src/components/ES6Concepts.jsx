@@ -217,7 +217,7 @@ const getAllChinese = customerData.filter((singleName) => {
 console.log(getAllChinese);
 console.log(...getAllChinese);
 
-// some - returns a boolean flag if any condition is satisfied...
+// some - returns a boolean flag if any (at least one) condition is satisfied...
 
 const checkSomeAge = customerData.some((singleName) => {
 	console.log(singleName.age);
@@ -250,8 +250,41 @@ console.log(fruits.includes("apple"), fruits.indexOf("guava"));
 
 // findIndex
 
+const getIndexOfGhanaian = customerData.findIndex((singleName) => {
+	return singleName.country === "India";
+});
+
+console.log(getIndexOfGhanaian);
+
 // --------------------------------------------------------------------
 
+// API Fetching and Integration...
+
+const getListOfProductElement = document.querySelector(".apiFetchProducts");
+
+function renderProducts(showProduct) {
+	getListOfProductElement.innerHTML = showProduct
+		.map((singleProduct) => `<p>${singleProduct.title}</p>`)
+		.join("");
+}
+
+async function fetchProducts() {
+	try {
+		const apiResponse = await fetch("https://dummyjson.com/products", {
+			method: "GET",
+		});
+		const apiResults = await apiResponse.json();
+		// console.log(apiResults);
+		// console.log(apiResults.products);
+		// console.log(...apiResults.products);
+
+		if (apiResults?.products?.length > 0) renderProducts(apiResults?.products);
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+fetchProducts();
 // --------------------------------------------------------------------
 
 // --------------------------------------------------------------------

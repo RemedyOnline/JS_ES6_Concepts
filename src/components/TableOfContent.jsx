@@ -27,37 +27,33 @@ const TableOfContent = () => {
 						<li>include</li>
 						<li>indexOf</li>
 						<li>findIndex</li>
-						<li>Logical OR</li>
 					</ul>
 				</li>
+				<li>API Fetching and Integration</li>
 				<li>Ternary Operator</li>
-				<li>Ternary Operator</li>
+				<li>Class-Based Components...</li>
+				<li>Functional Components...</li>
+				<ul className="list-disc ml-5">
+					<li>Using Function Block</li>
+					<li>Using Arrow Function Block</li>
+				</ul>
+				<li>Nested Components</li>
+				<li>
+					How to pass data from one component to the other... <br />
+					Thus, using Props...
+				</li>
+				<li>How to use ternary operators for Conditional statements</li>
+				<li>How to manage States</li>
+				<li>Life Cycle Methods in - Class-Based Components</li>
+				<ul className="list-disc ml-5">
+					<li>Conditional Statements, using the ternary operator...</li>
+					<li>Using Arrow Function Block</li>
+				</ul>
+				<li>Life Cycle Methods in - Functional Components</li>
 			</ol>
-			<details className="p-1  w-1/2 rounded-lg bg-gray-600">
-				<summary className="bg-gray-500 p-2 rounded-xl shadow-xl mb-2">
-					Hello
-				</summary>
-				Kofi is a boy
-			</details>
-			<div>
-				<div className="grid grid-flow-col grid-rows-2 grid-cols-3 gap-8 bg-red-200 group">
-					<div className="group-hover:transform group-hover:scale-110 group-hover:-rotate-6 bg-green-200">
-						<img src="/vite.svg" alt="" loading="lazy" className="w-48 h-48" />
-					</div>
-					<div className="col-start-3 group-hover:transform group-hover:scale-95 group-hover:-rotate-45 group-hover:translate-x-2 group-hover:translate-y-24 bg-blue-200">
-						<img src="/vite.svg" alt="" loading="lazy" className="w-48 h-48" />
-					</div>
-					<div className="group-hover:transform group-hover:scale-125 group-hover:rotate-12 group-hover:translate-y-11 bg-yellow-200">
-						<img src="/vite.svg" alt="" loading="lazy" className="w-48 h-48" />
-					</div>
-					<div className="group-hover:transform group-hover:translate-y-24 group-hover:-rotate-12 bg-purple-200">
-						<img src="/vite.svg" alt="" loading="lazy" className="w-48 h-48" />
-					</div>
-					<div className="row-start-1 col-start-2 col-span-2 group-hover:transform group-hover:translate-x-20 group-hover:translate-y-4 group-hover:scale-110 group-hover:rotate-12 bg-cyan-200">
-						<img src="/vite.svg" alt="" loading="lazy" className="w-48 h-48" />
-					</div>
-				</div>
-			</div>
+			<section>
+				<div className="apiFetchProducts"></div>
+			</section>
 		</section>
 	);
 };

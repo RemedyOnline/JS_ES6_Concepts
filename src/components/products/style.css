@@ -1,0 +1,12 @@
+.product-instance {
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.product-title {
+	text-align: center;
+	font-weight: 900;
+	color: red;
+	font-size: xx-large;
+	margin: 10px;
+}
