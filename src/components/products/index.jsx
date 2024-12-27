@@ -20,14 +20,30 @@ const ProductList = ({ name, price, productKey }) => {
 		<p className="product-title">No products available...</p>
 	);
 
-	// const renderTextBlock2 = null;
-	// if (flag) {
-	// 	renderTextBlock2 = <h2 className="product-title">Product Lists</h2>;
-	// } else {
-	// 	renderTextBlock2 = (
-	// 		<p className="product-title">No products available...</p>
-	// 	);
-	// }
+	let renderTextBlock2 = null;
+	if (!flag) {
+		renderTextBlock2 = <h2 className="product-title">Product Lists</h2>;
+	} else {
+		renderTextBlock2 = (
+			<p className="product-title">No products available...</p>
+		);
+	}
+
+	const signal = false;
+
+	function wasOffsideAnaa(signal) {
+		return !signal ? (
+			<p className="text-center italic line-through text-xl">Offside</p>
+		) : (
+			<p className="text-center italic underline text-xl">Clear Goal!</p>
+		);
+	}
+
+	const wasMessiOffice = signal ? (
+		<p className="text-center italic line-through text-xl">Offside</p>
+	) : (
+		<p className="text-center italic underline text-xl">Clear Goal!</p>
+	);
 
 	return (
 		<section>
@@ -38,7 +54,15 @@ const ProductList = ({ name, price, productKey }) => {
 			)}
 			{renderHeading(flag)}
 			{renderTextBlock}
-			{/* {renderTextBlock2} */}
+			{renderTextBlock2}
+			{/* For SIGNAL */}
+			{signal ? (
+				<p className="text-center italic line-through text-xl">Offside</p>
+			) : (
+				<p className="text-center italic underline text-xl">Clear Goal!</p>
+			)}
+			{wasOffsideAnaa(signal)}
+			{wasMessiOffice}
 			<div className="product-instance">
 				{productKey.map((prod, index) => (
 					<ProductItem singleItem={prod} key={index} />

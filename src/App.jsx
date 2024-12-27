@@ -13,12 +13,12 @@ function App() {
 		<>
 			<h1 className="text-3xl font-semibold mb-4">ES6 Concepts Tutorials</h1>
 			<section className="mx-12">
-				<ES6Concepts />
+				{/* <ES6Concepts /> */}
 				<TableOfContent />
 				<ClassBasedComponent />
-				<FunctionalComponent />
+				{/* <FunctionalComponent /> */}
 				{/* <Miscellaneous /> */}
-				<ProductList productKey={dummyProductsData} name="laptop" price={240} />
+				{/* <ProductList productKey={dummyProductsData} name="laptop" price={240} /> */}
 			</section>
 		</>
 	);

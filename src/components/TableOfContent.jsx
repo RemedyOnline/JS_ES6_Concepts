@@ -50,6 +50,23 @@ const TableOfContent = () => {
 					<li>Using Arrow Function Block</li>
 				</ul>
 				<li>Life Cycle Methods in - Functional Components</li>
+				<li>State Management in a Class-Based Component</li>
+				<li>Life Cycle Methods</li>
+				<ul className="list-disc ml-5">
+					<li>ComponentDidMount</li>
+					<li>ComponentDidUpdate</li>
+					<li>ComponentDidUnmount</li>
+				</ul>
+				<li>React Hooks</li>
+				<ul className="list-disc ml-5">
+					<li>useState</li>
+					<li>useEffect</li>
+					<li>useContext</li>
+					<li>useReducer</li>
+					<li>useRef</li>
+					<li>useCallback</li>
+					<li>useMemo</li>
+				</ul>
 			</ol>
 			<section>
 				<div className="apiFetchProducts"></div>
