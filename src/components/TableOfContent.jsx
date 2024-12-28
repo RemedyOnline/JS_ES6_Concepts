@@ -59,13 +59,29 @@ const TableOfContent = () => {
 				</ul>
 				<li>React Hooks</li>
 				<ul className="list-disc ml-5">
-					<li>useState</li>
-					<li>useEffect</li>
-					<li>useContext</li>
-					<li>useReducer</li>
-					<li>useRef</li>
-					<li>useCallback</li>
-					<li>useMemo</li>
+					<li>
+						useState - <span className="italic">for state management</span>{" "}
+					</li>
+					<li>
+						useEffect - <span className="italic">to manage side effects</span>{" "}
+					</li>
+					<li>
+						useContext - <span className="italic">for ...</span>{" "}
+					</li>
+					<li>
+						useReducer - <span className="italic">for ...</span>{" "}
+					</li>
+					<li>
+						useRef - <span className="italic">for managing DOM elements</span>{" "}
+					</li>
+					<li>
+						useCallback -{" "}
+						<span className="italic">for performance optimization</span>{" "}
+					</li>
+					<li>
+						useMemo -{" "}
+						<span className="italic">for performance optimization</span>{" "}
+					</li>
 				</ul>
 			</ol>
 			<section>
