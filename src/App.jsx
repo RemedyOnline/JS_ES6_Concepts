@@ -2,7 +2,7 @@ import "./App.css";
 import ClassBasedComponent from "./components/ClassBasedComponent1";
 import ES6Concepts from "./components/ES6Concepts";
 import FunctionalComponent from "./components/FunctionalComponent1";
-import UseContextHook from "./components/hooks/UseContextHook";
+import UseContextHook from "./contexts/UseContextHook";
 import UseEffectHook from "./components/hooks/UseEffectHook";
 import UseEffectWithDependency from "./components/hooks/UseEffectWithDependency";
 import UseEffectWithEmptyArray from "./components/hooks/UseEffectWithEmptyArray";
@@ -12,6 +12,11 @@ import UseStateHook from "./components/hooks/UseStateHook";
 import ProductList from "./components/products";
 import TableOfContent from "./components/TableOfContent";
 import UserFetching from "./components/users";
+import ContextText from "./components/contextExamples/ContextText";
+import ContextButton from "./components/contextExamples/ContextButton";
+import UseReducerExample from "./components/hooks/UseReducerExample";
+import UseReducerGPTExample from "./components/hooks/UseReducerGPTExample";
+import UseReducerExample2 from "./components/hooks/UseReducerGPTExample2";
 
 const dummyProductsData = ["product1", "product2", "product3"];
 
@@ -32,7 +37,15 @@ function App() {
         {/* <UseEffectWithDependency /> */}
         {/* <UseEffectWithNoDependency /> */}
         {/* <UserFetching /> */}
-        <UseContextHook />
+        <div className="flex gap-5 items-center">
+          <ContextText />
+          <ContextButton />
+        </div>
+        <div>
+          <UseReducerExample />
+          <UseReducerGPTExample />
+          <UseReducerExample2 />
+        </div>
       </section>
     </section>
   );
