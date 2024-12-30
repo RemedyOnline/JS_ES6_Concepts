@@ -17,6 +17,9 @@ import ContextButton from "./components/contextExamples/ContextButton";
 import UseReducerExample from "./components/hooks/UseReducerExample";
 import UseReducerGPTExample from "./components/hooks/UseReducerGPTExample";
 import UseReducerExample2 from "./components/hooks/UseReducerGPTExample2";
+import FormComponent from "./components/forms";
+import LoginComponent from "./components/comonForm/LoginComponent";
+import RegisterComponent from "./components/comonForm/RegisterComponent";
 
 const dummyProductsData = ["product1", "product2", "product3"];
 
@@ -37,14 +40,19 @@ function App() {
         {/* <UseEffectWithDependency /> */}
         {/* <UseEffectWithNoDependency /> */}
         {/* <UserFetching /> */}
-        <div className="flex gap-5 items-center">
-          <ContextText />
-          <ContextButton />
-        </div>
-        <div>
+        {/* <div className="flex gap-5 items-center"> */}
+        {/* <ContextText /> */}
+        {/* <ContextButton /> */}
+        {/* </div> */}
+        {/* <div>
           <UseReducerExample />
           <UseReducerGPTExample />
           <UseReducerExample2 />
+        </div> */}
+        {/* <FormComponent /> */}
+        <div className="flex gap-5 justify-between">
+          <LoginComponent />
+          <RegisterComponent />
         </div>
       </section>
     </section>

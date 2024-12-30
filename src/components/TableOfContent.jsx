@@ -85,6 +85,13 @@ const TableOfContent = () => {
             <span className="italic">for performance optimization</span>{" "}
           </li>
         </ul>
+        <li>React Forms</li>
+        <ul className="list-disc ml-5">
+          <li>Event Handling</li>
+          <li>Creating Forms</li>
+          <li>Form Submission</li>
+          <li>Dynamic Form Creation</li>
+        </ul>
       </ol>
       <section>
         <div className="apiFetchProducts"></div>
