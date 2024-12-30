@@ -51,6 +51,17 @@ export const RegisterFormElements = [
     componentType: "input",
   },
   {
+    name: "gender",
+    id: "gender",
+    label: "Gender",
+    type: "radio",
+    componentType: "radio",
+    options: [
+      { value: "Male", label: "Male" },
+      { value: "Female", label: "Female" },
+    ],
+  },
+  {
     name: "password",
     id: "password",
     placeholder: "Enter your password...",
@@ -58,4 +69,21 @@ export const RegisterFormElements = [
     type: "password",
     componentType: "input",
   },
+];
+
+export const ContactFormElements = [
+  // ... other form elements ...
+  {
+    name: "preferredContact",
+    id: "preferredContact",
+    label: "Preferred Contact Method",
+    type: "radio",
+    componentType: "radio",
+    options: [
+      { value: "email", label: "Email" },
+      { value: "phone", label: "Phone" },
+      { value: "whatsapp", label: "WhatsApp" },
+    ],
+  },
+  // ... other form elements ...
 ];

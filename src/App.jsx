@@ -20,6 +20,7 @@ import UseReducerExample2 from "./components/hooks/UseReducerGPTExample2";
 import FormComponent from "./components/forms";
 import LoginComponent from "./components/comonForm/LoginComponent";
 import RegisterComponent from "./components/comonForm/RegisterComponent";
+import ContactMeComponent from "./components/comonForm/ContactMeComponent";
 
 const dummyProductsData = ["product1", "product2", "product3"];
 
@@ -53,6 +54,7 @@ function App() {
         <div className="flex gap-5 justify-between">
           <LoginComponent />
           <RegisterComponent />
+          <ContactMeComponent />
         </div>
       </section>
     </section>

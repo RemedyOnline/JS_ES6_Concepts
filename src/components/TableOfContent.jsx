@@ -92,6 +92,10 @@ const TableOfContent = () => {
           <li>Form Submission</li>
           <li>Dynamic Form Creation</li>
         </ul>
+        <li>
+          Custom Hooks - Concepts which will allow us to reuse our components
+          efficienctly...
+        </li>
       </ol>
       <section>
         <div className="apiFetchProducts"></div>

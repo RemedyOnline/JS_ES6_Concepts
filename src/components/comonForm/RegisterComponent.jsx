@@ -6,6 +6,7 @@ const initialFormValues = {
   fName: "",
   lName: "",
   email: "",
+  gender: "",
   age: "",
   password: "",
 };

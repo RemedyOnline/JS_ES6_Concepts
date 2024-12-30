@@ -1,9 +1,16 @@
 import CommonInput from "./CommonInput";
+import CommonRadio from "./CommonRadio";
 
 const formTypes = {
   INPUT: "input",
   SELECT: "select",
   TEXTAREA: "textarea",
+  CHECKBOX: "checkbox",
+  DATE: "date",
+  PASSWORD: "password",
+  FILE: "file",
+  RADIO: "radio",
+  TEL: "tel",
 };
 
 const CommonForm = ({
@@ -33,6 +40,34 @@ const CommonForm = ({
               })
             }
           />
+        );
+        break;
+      case formTypes.RADIO:
+        content = (
+          <div className="my-3">
+            <label className="block mb-2">{getCurrentFormElement.label}</label>
+            <section className="flex gap-4">
+              {getCurrentFormElement.options.map((option, index) => (
+                <CommonRadio
+                  key={`${getCurrentFormElement.id}-${index}`}
+                  name={getCurrentFormElement.name}
+                  id={`${getCurrentFormElement.id}-${index}`}
+                  label={option.label}
+                  value={option.value}
+                  checked={
+                    formData[getCurrentFormElement.name] === option.value
+                  }
+                  type={getCurrentFormElement.type}
+                  onChange={(event) =>
+                    setFormData({
+                      ...formData,
+                      [event.target.name]: event.target.value,
+                    })
+                  }
+                />
+              ))}
+            </section>
+          </div>
         );
         break;
 

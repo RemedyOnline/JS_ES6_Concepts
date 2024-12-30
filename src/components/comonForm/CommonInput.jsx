@@ -10,7 +10,7 @@ const CommonInput = ({
   type,
 }) => {
   return (
-    <div className="my-3">
+    <div className="my-3 flex flex-col">
       <label htmlFor={name}>{label}</label>
       <input
         type={type || "text"}
