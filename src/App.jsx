@@ -29,7 +29,7 @@ function App() {
     <section>
       <h1 className="text-3xl font-semibold mb-4">ES6 Concepts Tutorials</h1>
       <section className="mx-12 space-y-12 my-12">
-        {/* <ES6Concepts /> */}
+        <ES6Concepts />
         <TableOfContent />
         {/* <ClassBasedComponent /> */}
         {/* <FunctionalComponent /> */}
@@ -51,11 +51,11 @@ function App() {
           <UseReducerExample2 />
         </div> */}
         {/* <FormComponent /> */}
-        <div className="flex gap-5 justify-between">
+        {/* <div className="flex gap-5 justify-between">
           <LoginComponent />
           <RegisterComponent />
           <ContactMeComponent />
-        </div>
+        </div> */}
       </section>
     </section>
   );
