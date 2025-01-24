@@ -1,4 +1,10 @@
 // --------------------------------------------------------------------
+const sectionHeader = (title) => {
+  console.log("                        ");
+  console.log(`  ${title}  `);
+  console.log("************************");
+  console.log("                        ");
+};
 // Logical AND and OR Operators
 
 let a = false;
@@ -10,12 +16,15 @@ function myDetails(userName, age, address) {
 }
 
 // &&
+sectionHeader("LOGICAL && and ||");
+
 console.log("Logical AND == ", a && myDetails("Kofi", 3, "Lapaz"));
 console.log("Logical OR == ", a || myName);
 
 // --------------------------------------------------------------------
 
 // Template Literals
+sectionHeader("Template Literals");
 let shape1 = "circle";
 let shape2 = "pentagon";
 
@@ -25,6 +34,7 @@ console.log(`${shape1} ${shape2}`);
 // --------------------------------------------------------------------
 
 // Ternary Operator
+sectionHeader("Ternary Operator");
 let showMoonIcon = false;
 
 if (showMoonIcon) {
@@ -55,6 +65,7 @@ if (haveEaten) {
 // --------------------------------------------------------------------
 
 // Destrusturing Objects
+sectionHeader("Destrusturing Objects");
 
 const id = 1;
 const productName = "phone";
@@ -66,6 +77,7 @@ const product = {
   type: type,
 };
 
+// doing shortened property name...
 const product2 = {
   desc: "very affordable...",
   id,
@@ -80,6 +92,8 @@ console.log([product]);
 console.log({ product });
 console.log(product2);
 console.log(getProduct2Desc);
+// to destructure, you do...
+// const {'what you want to take'} = 'the object or group you want to take from'
 const { desc } = product2; // destructuring "desc" from the function...
 console.log(desc);
 
@@ -90,9 +104,18 @@ console.log(arrayGroup);
 
 const [firstNum, secondNum, thirdNum, fourthNum, fifthNum] = arrayGroup; // destructuring here too...
 console.log(firstNum, secondNum, thirdNum, fourthNum, fifthNum);
+const [anyNumber] = arrayGroup;
+console.log(anyNumber);
+
 // --------------------------------------------------------------------
 
 // Default Parameters, Spread Operators, and Rest Operators...
+sectionHeader("Default Parameters");
+
+function productOfDigits(digit1, digit2) {
+  return digit1 * digit2;
+}
+console.log(productOfDigits(20)); // returns 60 because only "num1" had his value updated to 20 and so (20 * 3) = 60...
 
 function productOfNumbers(num1 = 2, num2 = 3) {
   return num1 * num2;
@@ -100,6 +123,8 @@ function productOfNumbers(num1 = 2, num2 = 3) {
 console.log(productOfNumbers(20)); // returns 60 because only "num1" had his value updated to 20 and so (20 * 3) = 60...
 
 // Spread Operators (...)
+sectionHeader("Spread Operator");
+
 const arrayGroup2 = [1, 3, 5];
 console.log(arrayGroup2);
 console.log(...arrayGroup2);
@@ -109,6 +134,7 @@ console.log([...arrayGroup2, ...arrayGroup]);
 console.log([12, ...arrayGroup2, 99, ...arrayGroup, 1000]);
 
 // Rest Operators...
+sectionHeader("REST operator");
 function getNumbers(a, b, ...c) {
   console.log(a, b, c);
   return "Helllooooo";
@@ -118,7 +144,7 @@ console.log(getNumbers(2, 3, 4, 5, 6, 7, 8, 9));
 // --------------------------------------------------------------------
 
 // ES6 Array Methods... map, filter, some, every, includes, indexOf, findIndex...
-
+sectionHeader("ES6 Array Methods");
 const customerData = [
   {
     id: 1,
@@ -195,6 +221,7 @@ const customerData = [
 ];
 
 // map...
+sectionHeader("MAP function");
 const getAllNames = customerData.map((singleName) => {
   console.log(...singleName.name);
   console.log(singleName.name);
@@ -204,6 +231,7 @@ const getAllNames = customerData.map((singleName) => {
 console.log(getAllNames);
 
 // find - returns only the first result it comes across..
+sectionHeader("FIND function");
 const getPersonByCountry = customerData.find((singleName) => {
   return singleName.country === "China"; //
 });
@@ -211,6 +239,7 @@ const getPersonByCountry = customerData.find((singleName) => {
 console.log(getPersonByCountry);
 
 // filter - returns all the results associated with the condition...
+sectionHeader("FILTER function");
 const getAllChinese = customerData.filter((singleName) => {
   return singleName.country === "China";
 });
@@ -219,6 +248,7 @@ console.log(getAllChinese);
 console.log(...getAllChinese);
 
 // some - returns a boolean flag if any (at least one) condition is satisfied...
+sectionHeader("SOME function");
 const checkSomeAge = customerData.some((singleName) => {
   console.log(singleName.age);
   let result = `It is ${
@@ -230,26 +260,30 @@ const checkSomeAge = customerData.some((singleName) => {
 
 console.log(checkSomeAge);
 // every - returns a boolean flag if all conditions are satisfied...
-
+sectionHeader("EVERY function");
 const checkEveryAge = customerData.every((singleName) => {
-  return singleName.age > 20;
+  let everyResult = `It is ${
+    singleName.age < 30
+  } that all the ages in the database is lesser than 30`;
+  console.log(everyResult);
+  return everyResult;
 });
 
 console.log(checkEveryAge);
 
 // includes - returns a boolean flag if condition is satified...
-
+sectionHeader("INCLUDES function");
 const fruits = ["apple", "banana", "mango"];
 
 console.log(fruits.includes("apple"));
 
 // indexOf - returns the current index of an item if it exist. and returns -1 if it does not exist...
-
+sectionHeader("INDEXOF function");
 console.log(fruits.includes("apple"), fruits.indexOf("mango"));
 console.log(fruits.includes("apple"), fruits.indexOf("guava"));
 
 // findIndex
-
+sectionHeader("FINDINDEX function");
 const getIndexOfGhanaian = customerData.findIndex((singleName) => {
   return singleName.country === "India";
 });
@@ -259,7 +293,7 @@ console.log(getIndexOfGhanaian);
 // --------------------------------------------------------------------
 
 // API Fetching and Integration...
-
+sectionHeader("API FETCH function");
 const getListOfProductElement = document.querySelector(".apiFetchProducts");
 
 function renderProducts(showProduct) {

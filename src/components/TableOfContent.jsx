@@ -1,7 +1,7 @@
 const TableOfContent = () => {
   return (
     <section className="space-y-5 text-lg">
-      <ol className="list-decimal ml-6 space-y-5">
+      <ol className="list-decimal space-y-5 text-base">
         <li>
           Logical Operators...
           <ul className="list-disc ml-5">
