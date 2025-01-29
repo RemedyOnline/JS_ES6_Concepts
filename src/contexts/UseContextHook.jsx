@@ -4,6 +4,7 @@ const GlobalContext = createContext();
 
 export const GlobalState = ({ children }) => {
   const [theme, setTheme] = useState("lightMode");
+
   const toggleTheme = () => {
     if (theme === "lightMode") {
       setTheme("darkMode");

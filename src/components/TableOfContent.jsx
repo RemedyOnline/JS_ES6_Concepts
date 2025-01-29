@@ -19,14 +19,35 @@ const TableOfContent = () => {
         <li>
           ES6 Array Methods...
           <ul className="list-disc ml-5">
-            <li>map</li>
-            <li>find</li>
-            <li>filter</li>
-            <li>some</li>
-            <li>every</li>
-            <li>include</li>
-            <li>indexOf</li>
-            <li>findIndex</li>
+            <li>
+              <strong>map</strong>
+            </li>
+            <li>
+              <strong>find</strong> - returns to first result it encounters
+            </li>
+            <li>
+              <strong>filter</strong> - returns all possible results encountered
+            </li>
+            <li>
+              <strong>some</strong> - returns a boolean as to whether at least
+              one encounter true
+            </li>
+            <li>
+              <strong>every</strong> - returns a boolean as to whether all
+              encounters are true or not
+            </li>
+            <li>
+              <strong>include</strong> - returns a boolean as to whether a
+              condition is satisfied or not
+            </li>
+            <li>
+              <strong>indexOf</strong> - returns the current index of an item.
+              NB: returns &apos;-1&apos; if item does not exist.
+            </li>
+            <li>
+              <strong>findIndex</strong> - returns the index of an item. NB:
+              returns &apos;-1&apos; if item does not exist.
+            </li>
           </ul>
         </li>
         <li>API Fetching and Integration</li>
@@ -40,11 +61,17 @@ const TableOfContent = () => {
         <li>Nested Components</li>
         <li>
           How to pass data from one component to the other... <br />
-          Thus, using Props...
+          Thus, using Props... <br />
+          Thus, props is a way to pass data from one component to another...
         </li>
         <li>How to use ternary operators for Conditional statements</li>
         <li>How to manage States</li>
         <li>Life Cycle Methods in - Class-Based Components</li>
+        <ul className="list-disc ml-5">
+          <li>ComponentDidMount</li>
+          <li>ComponentDidUpdate</li>
+          <li>ComponentWillUnmount</li>
+        </ul>
         <ul className="list-disc ml-5">
           <li>Conditional Statements, using the ternary operator...</li>
           <li>Using Arrow Function Block</li>
@@ -53,7 +80,7 @@ const TableOfContent = () => {
         <li>State Management in a Class-Based Component</li>
         <li>Life Cycle Methods</li>
         <ul className="list-disc ml-5">
-          <li>ComponentDidMount</li>
+          <li>ComponentDidMount - runs for the first time when page reloads</li>
           <li>ComponentDidUpdate</li>
           <li>ComponentDidUnmount</li>
         </ul>
@@ -98,7 +125,8 @@ const TableOfContent = () => {
         </li>
       </ol>
       <section>
-        <div className="apiFetchProducts"></div>
+        <div className="apiFetchProducts py-4 bg-neutral-700"></div>
+        <div className="recipeList py-4 bg-neutral-900"></div>
       </section>
     </section>
   );

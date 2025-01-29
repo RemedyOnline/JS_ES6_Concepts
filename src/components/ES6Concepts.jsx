@@ -262,7 +262,7 @@ console.log(checkSomeAge);
 // every - returns a boolean flag if all conditions are satisfied...
 sectionHeader("EVERY function");
 const checkEveryAge = customerData.every((singleName) => {
-  let everyResult = `It is ${
+  let everyResult = ` It is ${
     singleName.age < 30
   } that all the ages in the database is lesser than 30`;
   console.log(everyResult);
@@ -289,6 +289,7 @@ const getIndexOfGhanaian = customerData.findIndex((singleName) => {
 });
 
 console.log(getIndexOfGhanaian);
+// console.log(fruits.indexof("banana"));
 
 // --------------------------------------------------------------------
 
@@ -308,7 +309,7 @@ async function fetchProducts() {
       method: "GET",
     });
     const apiResults = await apiResponse.json();
-    // console.log(apiResults);
+    console.log(apiResults);
     // console.log(apiResults.products);
     // console.log(...apiResults.products);
 
@@ -320,8 +321,32 @@ async function fetchProducts() {
 
 fetchProducts();
 // --------------------------------------------------------------------
+// API Fetching and Integration 2...
+sectionHeader("API FETCH function 2");
 
-// --------------------------------------------------------------------
+let getRecipeElement = document.querySelector(".recipeList");
+
+function renderRecipeList(displayRecipes) {
+  getRecipeElement.innerHTML = displayRecipes
+    .map((oneRecipe) => `<p>${oneRecipe.name}</p>`)
+    .join("");
+}
+
+async function fetchRecipeList() {
+  try {
+    const request = await fetch("https://dummyjson.com/recipes", {
+      method: "GET",
+    });
+    const results = await request.json();
+    console.log("results", results);
+    if (results?.recipes?.length > 0) renderRecipeList(results?.recipes);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+fetchRecipeList();
+// ---------------------------------------------------------------
 
 // --------------------------------------------------------------------
 

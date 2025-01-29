@@ -41,10 +41,10 @@ const UseEffectHook = () => {
   useEffect(() => {
     console.log("Run on reload...");
     setCounter(3);
-  }, []);
+  }, []); // thus, with an empty array... runs once, just on page load
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <h2 className="text-2xl font-bold underline mb-2">
         UseEffectHook Lesson Page
       </h2>
@@ -55,7 +55,7 @@ const UseEffectHook = () => {
       )}
       <button
         onClick={handleSwitch}
-        className="p-2 rounded-xl bg-blue-200 font-medium m-2"
+        className="p-2 rounded-xl bg-blue-300 font-medium m-2"
       >
         Switch State
       </button>

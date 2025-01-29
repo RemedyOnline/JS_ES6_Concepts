@@ -10,11 +10,13 @@ const ContextButton = () => {
         onClick={toggleTheme}
         className={
           theme === "lightMode"
-            ? "bg-red-300 text-red-950 p-2 rounded-lg font-medium"
-            : "bg-green-300 text-green-950 p-2 rounded-lg font-medium"
+            ? "bg-black text-white p-2 rounded-lg font-medium"
+            : "bg-white text-black p-2 rounded-lg font-medium"
         }
       >
-        Toggle theme 🌙
+        {theme === "lightMode"
+          ? "Switch to DarkMode🌙"
+          : "Switch to LightMode☀️"}
       </button>
     </div>
   );

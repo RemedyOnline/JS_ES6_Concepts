@@ -9,7 +9,7 @@ const UserFetching = () => {
       setLoading(true);
       const apiResponse = await fetch("https://dummyjson.com/users");
       const results = await apiResponse.json();
-      console.log(results.users);
+      console.log(results.users); // doing this to crosscheck the data we are actually getting...
       if (results?.users) {
         setLoading(false);
         setUserData(results.users);
