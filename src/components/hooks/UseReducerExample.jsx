@@ -31,6 +31,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
+
 const UseReducerExample = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   console.log(state);
@@ -48,7 +49,7 @@ const UseReducerExample = () => {
           I&apos;m so glad I understand useReducer now too bro!
         </p>
       ) : (
-        ""
+        <div className="bg-slate-300 text-red-900 p-5 w-full"></div>
       )}
       <div className="flex gap-2">
         <button

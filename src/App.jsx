@@ -50,15 +50,15 @@ function App() {
         {/* <UseEffectWithDependency /> */}
         {/* <UseEffectWithNoDependency /> */}
         {/* <UserFetching /> */}
-        <div className="flex gap-5 items-center">
+        {/* <div className="flex gap-5 items-center">
           <ContextText />
           <ContextButton />
-        </div>
-        {/* <div>
+        </div> */}
+        <div>
           <UseReducerExample />
           <UseReducerGPTExample />
           <UseReducerExample2 />
-        </div> */}
+        </div>
         {/* <FormComponent /> */}
         {/* <div className="flex gap-5 justify-between">
           <LoginComponent />

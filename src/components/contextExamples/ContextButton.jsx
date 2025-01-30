@@ -10,8 +10,8 @@ const ContextButton = () => {
         onClick={toggleTheme}
         className={
           theme === "lightMode"
-            ? "bg-black text-white p-2 rounded-lg font-medium"
-            : "bg-white text-black p-2 rounded-lg font-medium"
+            ? "bg-white text-black p-2 rounded-lg font-medium shadow-md"
+            : "bg-black text-white p-2 rounded-lg font-medium shadow-md"
         }
       >
         {theme === "lightMode"

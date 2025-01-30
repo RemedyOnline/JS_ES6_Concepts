@@ -30,7 +30,7 @@ const UseReducerGPTExample = () => {
   console.log(state);
 
   return (
-    <div className="my-5">
+    <div className="my-5 text-black">
       <h2 className="text-2xl text-center underline font-bold">
         UseReducerGPTExample
       </h2>
