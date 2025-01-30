@@ -1,13 +1,15 @@
 import { useState } from "react";
 
 const FormInstance1 = () => {
+  // start by declaring a state for each input field...
   const [nameInputValue, setNameInputValue] = useState("");
   const [emailInputValue, setEmailInputValue] = useState("");
   const [subjectInputValue, setSubjectInputValue] = useState("");
   const [messageInputValue, setMessageInputValue] = useState("");
 
+  // then you create a function to handle each input distinctively...
   const handleNameInputChange = (event) => {
-    const { value } = event.target; // you can do this, to destructure VALUE from TARGET...
+    const { value } = event.target; // destructuring VALUE from EVENT.TARGET...
     console.log("Name...:", value);
     setNameInputValue(value);
     //   setNameInputValue(event.target.value); // or you can also do this to access the value directly...
@@ -57,7 +59,7 @@ const FormInstance1 = () => {
             placeholder="Enter your full name..."
             value={nameInputValue}
             onChange={handleNameInputChange}
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           />
           <input
             type="text"
@@ -65,7 +67,7 @@ const FormInstance1 = () => {
             placeholder="Enter your full name..."
             value={emailInputValue}
             onChange={handleEmailInputChange}
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           />
           <input
             type="text"
@@ -73,7 +75,7 @@ const FormInstance1 = () => {
             placeholder="Enter your full name..."
             value={subjectInputValue}
             onChange={handleSubjectInputChange}
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           />
           <textarea
             name="messageInputValue"
@@ -81,7 +83,7 @@ const FormInstance1 = () => {
             value={messageInputValue}
             onChange={handleMessageInputChange}
             placeholder="Enter your message bro..."
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           ></textarea>
         </div>
         <button

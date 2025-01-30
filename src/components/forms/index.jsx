@@ -5,7 +5,7 @@ import FormInstance3 from "./FormInstance3";
 const FormComponent = () => {
   return (
     <div className="space-y-2">
-      <h2 className="text-2xl italic underline font-medium">
+      <h2 className="text-2xl italic underline font-bold uppercase text-center py-4">
         Learning How to Handle Forms Appropriately...
       </h2>
       <div className="grid grid-cols-3 gap-5">

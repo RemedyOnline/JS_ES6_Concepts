@@ -41,7 +41,7 @@ const FormInstance2 = () => {
             value={formData.fullName}
             onChange={handleInputChange}
             placeholder="Enter your full name..."
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           />
           <input
             type="text"
@@ -50,7 +50,7 @@ const FormInstance2 = () => {
             value={formData.email}
             onChange={handleInputChange}
             placeholder="Enter your full name..."
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           />
           <input
             type="text"
@@ -59,7 +59,7 @@ const FormInstance2 = () => {
             value={formData.subject}
             onChange={handleInputChange}
             placeholder="Enter your full name..."
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           />
           <textarea
             name="message"
@@ -67,7 +67,7 @@ const FormInstance2 = () => {
             value={formData.message}
             onChange={handleInputChange}
             placeholder="Enter your message bro..."
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           ></textarea>
         </div>
         <button

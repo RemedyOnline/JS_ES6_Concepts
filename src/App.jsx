@@ -30,14 +30,14 @@ function App() {
   const { theme } = useContext(GlobalContext);
   return (
     <section
-      className={`${theme === "lightMode" ? "bg-slate-100" : "bg-slate-950"} h-screen `}
+      className={`${theme === "lightMode" ? "bg-slate-100" : "bg-slate-950"}  text-black min-h-screen h-full`}
     >
       <h1
         className={`${theme === "lightMode" ? "text-black" : "text-white"} text-center text-3xl font-bold pt-5`}
       >
         ES6 Concepts Tutorials
       </h1>
-      <section className="mx-12 space-y-12 my-12">
+      <section className="mx-12 space-y-12 py-12">
         {/* <ES6Concepts /> */}
         {/* <TableOfContent /> */}
         {/* <ClassBasedComponent /> */}
@@ -54,17 +54,17 @@ function App() {
           <ContextText />
           <ContextButton />
         </div> */}
-        <div>
+        {/* <div>
           <UseReducerExample />
           <UseReducerGPTExample />
           <UseReducerExample2 />
-        </div>
+        </div> */}
         {/* <FormComponent /> */}
-        {/* <div className="flex gap-5 justify-between">
+        <div className="flex gap-5 justify-between">
           <LoginComponent />
           <RegisterComponent />
           <ContactMeComponent />
-        </div> */}
+        </div>
       </section>
     </section>
   );

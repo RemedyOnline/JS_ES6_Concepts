@@ -8,15 +8,6 @@ const FormInstance3 = () => {
     message: "",
   });
 
-  //   const handleInputChange = (event) => {
-  //     console.log(event.target.name);
-  //     const { name, value } = event.target;
-  //     setFormData({
-  //       ...formData,
-  //       [name]: value,
-  //     });
-  //   };
-
   const handleFormSubmission = (event) => {
     event.preventDefault();
     console.log(formData);
@@ -39,59 +30,59 @@ const FormInstance3 = () => {
             name="fullName"
             id="fullName"
             value={formData.fullName}
-            // onChange={handleInputChange}
-            onChange={(event) =>
+            onChange={(event) => {
+              const { name, value } = event.target;
               setFormData({
                 ...formData,
-                [event.target.name]: event.target.value,
-              })
-            }
+                [name]: value,
+              });
+            }}
             placeholder="Enter your full name..."
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           />
           <input
             type="text"
             name="email"
             id="email"
             value={formData.email}
-            // onChange={handleInputChange}
-            onChange={(event) =>
+            onChange={(event) => {
+              const { name, value } = event.target;
               setFormData({
                 ...formData,
-                [event.target.name]: event.target.value,
-              })
-            }
+                [name]: value,
+              });
+            }}
             placeholder="Enter your full name..."
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           />
           <input
             type="text"
             name="subject"
             id="subject"
             value={formData.subject}
-            // onChange={handleInputChange}
-            onChange={(event) =>
+            onChange={(event) => {
+              const { name, value } = event.target;
               setFormData({
                 ...formData,
-                [event.target.name]: event.target.value,
-              })
-            }
+                [name]: value,
+              });
+            }}
             placeholder="Enter your full name..."
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           />
           <textarea
             name="message"
             id="message"
             value={formData.message}
-            // onChange={handleInputChange}
-            onChange={(event) =>
+            onChange={(event) => {
+              const { name, value } = event.target;
               setFormData({
                 ...formData,
-                [event.target.name]: event.target.value,
-              })
-            }
+                [name]: value,
+              });
+            }}
             placeholder="Enter your message bro..."
-            className="bg-neutral-700 p-2 rounded-lg"
+            className="bg-neutral-300 border border-slate-500 p-2 rounded-lg"
           ></textarea>
         </div>
         <button

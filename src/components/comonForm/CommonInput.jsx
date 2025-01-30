@@ -19,7 +19,7 @@ const CommonInput = ({
         value={value}
         placeholder={placeholder || "Enter value here..."}
         onChange={onChange}
-        className="bg-neutral-700 p-2 rounded-lg border border-neutral-500 "
+        className="bg-neutral-300 border-slate-500 p-2 rounded-lg border"
       />
     </div>
   );

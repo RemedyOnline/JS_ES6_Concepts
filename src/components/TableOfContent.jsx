@@ -125,7 +125,7 @@ const TableOfContent = () => {
         </li>
       </ol>
       <section>
-        <div className="apiFetchProducts py-4 bg-neutral-700"></div>
+        <div className="apiFetchProducts py-4 bg-neutral-300 border border-slate-500"></div>
         <div className="recipeList py-4 bg-neutral-900"></div>
       </section>
     </section>
