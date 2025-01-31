@@ -9,9 +9,9 @@ const FormComponent = () => {
         Learning How to Handle Forms Appropriately...
       </h2>
       <div className="grid grid-cols-3 gap-5">
-        <FormInstance1 />
-        <FormInstance2 />
-        <FormInstance3 />
+        {/* <FormInstance1 /> */}
+        {/* <FormInstance2 /> */}
+        {/* <FormInstance3 /> */}
       </div>
     </div>
   );

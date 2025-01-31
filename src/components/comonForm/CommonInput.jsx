@@ -9,6 +9,7 @@ const CommonInput = ({
   onChange,
   type,
 }) => {
+  // items in the prop here tells us that we will be receiving them, not sending...
   return (
     <div className="my-3 flex flex-col">
       <label htmlFor={name}>{label}</label>

@@ -59,7 +59,7 @@ function App() {
           <UseReducerGPTExample />
           <UseReducerExample2 />
         </div> */}
-        {/* <FormComponent /> */}
+        <FormComponent />
         <div className="flex gap-5 justify-between">
           <LoginComponent />
           <RegisterComponent />

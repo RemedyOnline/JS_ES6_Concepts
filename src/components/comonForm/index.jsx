@@ -96,7 +96,7 @@ const CommonForm = ({
 
   return (
     <div>
-      <h2>Common Form</h2>
+      <h2 className="text-center p-1 m-1 bg-slate-200">Common Form</h2>
       <form onSubmit={onHandleSubmit}>
         {formElements?.length
           ? formElements.map((singleFormElement) =>
